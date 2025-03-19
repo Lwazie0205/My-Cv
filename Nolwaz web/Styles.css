@@ -1,0 +1,225 @@
+/* ========== Reset & Global Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f5;
+    color: #333;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* ========== Profile Card ========== */
+.profile-card {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Profile Image */
+.profile-image {
+    flex: 1 1 250px;
+    max-width: 250px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 6px solid #2575fc;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Info */
+.profile-info {
+    flex: 2 1 500px;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #2575fc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #6a11cb;
+}
+
+/* ========== Sections (About, Skills, Projects) ========== */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6a11cb;
+    text-align: center;
+}
+
+/* Skills as Chips */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skills-list li {
+    list-style: none;
+    background: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.skills-list li:hover {
+    background: #6a11cb;
+}
+
+/* ========== Project Cards ========== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.project-card h3 {
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #555;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ========== Contact Form ========== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    padding: 15px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+/* ========== Dark Mode ========== */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode h2 {
+    color: #ffd700;
+}
+
+.dark-mode .project-card {
+    background: #333;
+    color: white;
+}
+
+.dark-mode button {
+    background: #ffd700;
+    color: black;
+}
+
+.dark-mode button:hover {
+    background: #ffb400;
+}
+
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background: #222;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
